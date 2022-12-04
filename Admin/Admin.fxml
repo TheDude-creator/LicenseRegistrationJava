@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Admin.AdminController">
+   <children>
+      <TabPane layoutX="14.0" layoutY="14.0" prefHeight="371.0" prefWidth="577.0" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab text="Korisnik">
+            <content>
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <HBox layoutX="189.0" layoutY="14.0" prefHeight="319.0" prefWidth="383.0">
+                           <children>
+                              <TableView fx:id="korisniktable" prefHeight="319.0" prefWidth="600.0">
+                                <columns>
+                                  <TableColumn fx:id="idcolumn" prefWidth="51.0" text="ID" />
+                                  <TableColumn fx:id="imecolumn" prefWidth="99.0" text="Ime" />
+                                    <TableColumn fx:id="prezimecolumn" prefWidth="75.0" text="Prezime" />
+                                    <TableColumn fx:id="registracijacolumn" prefWidth="75.0" text="Registracija" />
+                                    <TableColumn fx:id="datumcolumn" prefWidth="75.0" text="Datum Registracija" />
+                                </columns>
+                              </TableView>
+                           </children>
+                        </HBox>
+                        <VBox layoutX="14.0" layoutY="13.0" prefHeight="320.0" prefWidth="170.0">
+                           <children>
+                              <Label text="Dodaj Korisnika" />
+                              <TextField fx:id="id" prefHeight="24.0" prefWidth="78.0" promptText="ID" />
+                              <TextField fx:id="ime" layoutX="10.0" layoutY="26.0" prefHeight="24.0" prefWidth="78.0" promptText="Ime" />
+                              <TextField fx:id="prezime" layoutX="10.0" layoutY="50.0" prefHeight="24.0" prefWidth="78.0" promptText="Prezime" />
+                              <TextField fx:id="registracija" layoutX="10.0" layoutY="74.0" prefHeight="24.0" prefWidth="78.0" promptText="Registracija" />
+                              <DatePicker fx:id="Datum" />
+                              <Button mnemonicParsing="false" onAction="#addKorisnik" prefHeight="24.0" prefWidth="170.0" text="Dodaj" />
+                              <Button layoutX="10.0" layoutY="146.0" mnemonicParsing="false" onAction="#clearFields" prefHeight="24.0" prefWidth="170.0" text="Izbrisi formu" />
+                              <Button layoutX="10.0" layoutY="170.0" mnemonicParsing="false" onAction="#loadKorisnikData" prefHeight="24.0" prefWidth="170.0" text="Ucitaj podatke" />
+                           </children>
+                        </VBox>
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>
